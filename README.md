@@ -1,5 +1,26 @@
 # Disaster Response Pipeline Project
 
+### Summary
+This project's goal is to provide a way for messages sent during/after a disaster to be classified into categories.
+These classifications can help first responders and other personnel to triage and provide aid to those most in need.
+
+### Files in this repository
+```
+- app
+  - templates
+  - requirements.txt
+  - run.py
+  - starting_verb_extrator.py
+- data
+  - disaster_categories.csv
+  - disaster_messages.csv
+  - DisasterResponse.db
+  - process_data.py
+- models
+  - starting_verb_extrator.py
+  - train_classifier.py
+```
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
