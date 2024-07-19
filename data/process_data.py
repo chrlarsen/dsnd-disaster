@@ -43,6 +43,7 @@ def clean_data(df):
     df = df.drop('categories', axis=1)
     df = pd.concat([df, categories], axis=1)
     df = df.drop_duplicates(keep='first')
+    df = df[(df != 2).all(axis=1)]
     return df
 
 
@@ -54,7 +55,7 @@ def save_data(df, database_filename):
     :return: None
     """
     engine = create_engine(f'sqlite:///{database_filename}')
-    df.to_sql('disaster_response_cleaned', engine, index=False)
+    df.to_sql('disaster_response_cleaned', engine, index=False, if_exists='replace')
 
 
 def main():
